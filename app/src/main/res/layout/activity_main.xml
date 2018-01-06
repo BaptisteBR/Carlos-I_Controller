@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ceri.app.carlos_i.MainActivity">
+
+    <VideoView
+        android:id="@+id/vv_camera"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/bt_forward"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text_forward"
+                android:layout_column="1" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/bt_left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text_left" />
+
+            <Button
+                android:id="@+id/bt_backward"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text_backward" />
+
+            <Button
+                android:id="@+id/bt_right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text_right" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>

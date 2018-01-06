@@ -1,3 +1,10 @@
 <resources>
+
     <string name="app_name">Carlos-I</string>
+
+    <string name="text_forward">FORWARD</string>
+    <string name="text_backward">BACKWARD</string>
+    <string name="text_left">LEFT</string>
+    <string name="text_right">RIGHT</string>
+
 </resources>
