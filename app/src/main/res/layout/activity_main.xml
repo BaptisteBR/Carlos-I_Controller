@@ -7,46 +7,89 @@
     android:orientation="vertical"
     tools:context="com.ceri.app.carlos_i.MainActivity">
 
-    <VideoView
-        android:id="@+id/vv_camera"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2" />
+        android:layout_weight="12"
+        android:orientation="vertical">
+
+        <!-- Composant initialement utilise pour gere le flux streaming -->
+        <!--<VideoView
+            android:id="@+id/vv_camera"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />-->
+
+        <!-- Composant utilise pour afficher les frames d'images -->
+        <ImageView
+            android:id="@+id/iv_camera"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:src="@drawable/intermission"/>
+
+        <!-- Bouton de rafraichissement -->
+        <Button
+            android:id="@+id/bt_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:text="@string/text_refresh"/>
+
+    </LinearLayout>
 
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="6">
 
-        <TableRow>
+        <TableRow
+            android:layout_width="match_parent">
 
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="2" />
+
+            <!-- Bouton directionel, marche avant -->
             <Button
                 android:id="@+id/bt_forward"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/text_forward"
-                android:layout_column="1" />
+                android:layout_weight="2"
+                android:text="@string/text_forward" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="2" />
 
         </TableRow>
 
-        <TableRow>
+        <TableRow
+            android:layout_width="match_parent">
 
+            <!-- Bouton directionnel, tourner a gauche -->
             <Button
                 android:id="@+id/bt_left"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="2"
                 android:text="@string/text_left" />
 
+            <!-- Bouton directionnel, marche arriere -->
             <Button
                 android:id="@+id/bt_backward"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="2"
                 android:text="@string/text_backward" />
 
+            <!-- Bouton directionnel, tourner a droite -->
             <Button
                 android:id="@+id/bt_right"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="2"
                 android:text="@string/text_right" />
 
         </TableRow>

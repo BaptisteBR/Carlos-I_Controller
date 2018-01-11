@@ -1,7 +1,12 @@
 <resources>
 
+    <!-- Nom de l'application -->
     <string name="app_name">Carlos-I</string>
 
+    <!-- Label du bouton de rafraichissement -->
+    <string name="text_refresh">REFRESH</string>
+
+    <!-- Labels des boutons directionnelles -->
     <string name="text_forward">FORWARD</string>
     <string name="text_backward">BACKWARD</string>
     <string name="text_left">LEFT</string>

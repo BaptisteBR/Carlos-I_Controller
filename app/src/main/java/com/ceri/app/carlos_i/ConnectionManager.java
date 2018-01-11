@@ -14,10 +14,15 @@ import static android.content.Context.WIFI_SERVICE;
 
 /**
  * Created by Baptiste on 06/01/2018.
+ * Classe utilitaire permettant de recuperer l'adresse IP du point d'acces WiFi
  */
-
 public class ConnectionManager {
 
+    /**
+     * Methode permettant de recuperer l'adresse IP du point d'acces WiFi
+     * @param context Contexte d'execution
+     * @return Adresse IP du point d'acces WiFi
+     */
     public static String getGatewayIPAddress(Context context) {
 
         WifiManager manager = (WifiManager) context.getSystemService(WIFI_SERVICE);
@@ -36,6 +41,11 @@ public class ConnectionManager {
 
     }
 
+    /**
+     * Converti une adresse hexadecimale en adresse IP
+     * @param i Adresse hexadecimale
+     * @return Adresse IP
+     */
     private static String intToIp(int i) {
 
         return ((i >> 24 ) & 0xFF ) + "."
@@ -45,6 +55,10 @@ public class ConnectionManager {
 
     }
 
+    /**
+     * Recupere l'adresse IP de l'interface connectee au point d'acces WiFi
+     * @return
+     */
     private static String getWifiApIpAddress() {
         try {
             for (Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces(); en
